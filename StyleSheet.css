@@ -1,0 +1,94 @@
+/* Set body background color and font properties */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Set header properties */
+header {
+    background-color: dodgerblue;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Set navigation properties */
+nav {
+    display: flex;
+    justify-content: right;
+
+}
+
+nav menu {
+    display: flex;
+    list-style: none;
+}
+
+nav menu li {
+    margin-right: 20px;
+}
+
+nav menu li a {
+    color: black;
+    text-decoration: none;
+}
+nav menu li a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Set aside properties */
+aside {
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+aside h2 {
+    color: #333;
+    font-size: 44px;
+}
+
+aside h3 {
+    color: dodgerblue;
+    font-size: 28px;
+}
+
+/* Set article properties */
+article {
+    background-color: #fff;
+    padding: 20px;
+    flex: 1;
+}
+
+article img {
+    max-width: 25%;
+    bottom: 40px;
+    right: 45px;
+
+}
+#homeImage{
+    width: 20em;
+    position: relative;
+    padding-top: -100px;
+    padding-right: 20px;
+    padding-left: 900px;
+
+}
+
+article button {
+    background-color: #333;
+    color: dodgerblue;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+article button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+article button:hover {
+    background-color: #666;
+}
