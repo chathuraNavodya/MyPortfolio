@@ -954,7 +954,7 @@ section{
   align-items: center;
   margin: -3rem;
   text-decoration: none;
-  color: #000;
+  color: blue;
   transition: color 0.4s ease;
 
 }
@@ -967,6 +967,7 @@ section{
   width: 30px;
   height: 30px;
   margin-left: 5.9rem;
+  margin-bottom: 1rem;
 
 }
 
@@ -977,9 +978,8 @@ section{
   transition: color 0.3s ease;
 
 
+
 }
-
-
 
 
 /*.followme-wrap {*/
