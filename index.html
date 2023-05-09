@@ -1,147 +1,529 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="normalize.css">
 
-<head>
-    <title>My Web Page </title>
-    <!--    <base href="localhost"> -->
-    <meta name="keywords" content="IJSE, GDSE, Sri Lanka, CMJD, RWAD ">
-    <meta name="description"
-          content="This is for testing my web page description. This is to demonstrate how to create a web page using html and css">
-    <meta name="author" content="IJSE">
-    <meta name="owner" content="Chathura Navodya">
-    <meta name="robots" content="index">
-    <meta name="theme-color" content="red">
-    <!-- <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no"> -->
-    <!-- 1 to 10 -->
-    <meta name="viewport" content="width=device-width initial-scale=1 minimum-scale=2 maximum-scale=10">
-    <!-- <meta http-equiv="refresh" content="3;https://ijse.lk"> -->
-    <!-- this is for skipping links from the SEO -->
-    <link rel="canonical" href="http://ijse.lk">
-   <link rel="stylesheet" href="StyleSheet.css">
-</head>
+    <link rel="stylesheet" href="StyleSheet.css" />
+  </head>
+  <body>
+    <main>
+      <header id="header">
+        <div class="overlay overlay-lg">
+
+          <img src="./assets/img1/shapes/circle.png" class="shape circle" alt="" />
+          <img
+            src="./assets/img1/shapes/half-circle.png"
+            class="shape half-circle1"
+            alt=""
+          />
+          <img
+            src="./assets/img1/shapes/half-circle.png"
+            class="shape half-circle2"
+            alt=""
+          />
+          <img src="./assets/img1/shapes/x.png" class="shape xshape" alt="" />
+          <img src="./assets/img1/shapes/wave.png" class="shape wave wave1" alt="" />
+          <img src="./assets/img1/shapes/wave.png" class="shape wave wave2" alt="" />
+          <img src="./assets/img1/shapes/triangle.png" class="shape triangle" alt="" />
+          <img src="./assets/img1/shapes/letters.png" class="letters" alt="" />
+          <img src="./assets/img1/shapes/points1.png" class="points points1" alt="" />
+        </div>
+
+        <nav>
+          <div class="container">
+            <div class="logo">
+              <img src="./assets/img1/8c4c84168300969.Y3JvcCwzMzY2LDI2MzMsMCww.jpg" alt="" />
+            </div>
+
+            <div class="links">
+              <ul>
+                <li>
+                  <a href="#header">Home</a>
+
+                </li>
+                <li>
+                <a href="#about">About</a>
+                </li>
 
 
-<body>
-<header>
+                <li>
+                  <a href="#Projects">Projects</a>
+                </li>
+                <li> <a href="#Services">Services</a>
+                </li>
 
-    <nav>
-        <menu>
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#About">About</a></li>
-            <li> <a href="#Education And Skill">Education</a></li>
-            <li> <a href="#Education And Skill">Skill</a></li>
-            <li> <a href="#Projects">Projects</a></li>
-            <li> <a href="#Contact">Contact Details</a></li>
+                  <a href="#contact">Contact</a>
+                </li>
+                <li>
+                  <a href="#hireme" class="active">Hire me</a>
+                </li>
+              </ul>
+            </div>
 
-        </menu>
-    </nav>
-</header>
+            <div class="menu">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </nav>
 
-<!..........................................main..........................................................................>
-<main>
-    <section>
-        <aside>
-            <h2>i'm Chathura Navodaya</h2>
-            <h3>software developer</h3>
-        </aside>
-        <article>
+        <div class="header-content">
+          <div class="container grid-2">
+            <div class="column-1">
 
-            <img id="homeImage" src="assets/img/20210211_124241.jpg" ><br>
-            <button><a href="overrall Report.pdf" download="D:\c folder\Videos\New folder (3)\My CV.pdf">Download pdf </a></button>
-        </article>
-    </section>
+              <h1 class="header-title"> Im'Chathura Navodya</h1>
+              <p class="text">
+                 Web Design And Developer.
+              </p>
+              <a href="#" class="btn">Download CV</a>
 
-    <section>
-        <article>
-            <h3 ALIGN="CENTER">About</h3>
-            <p>I am 21 years old web developer, my passion is creating engaging and responsive websites that provide users with seamless experiences.
+
+                <div class="Media icon">
+                  <li>
+
+                    <a href="#linkedin"><img src="assets/img1/linkedin.png"></a>
+                  </li>
+                  <li>
+                    <a href="#social"><img src="assets/img1/social.png"></a>
+                  </li>
+                  <li>
+                    <a href="#whatsapp"><img src="assets/img1/whatsapp.png"></a>
+                  </li>
+                  <li>
+                    <a href="#mail"><img src="assets/img1/mail.png"></a>
+                  </li>
+
+
+                </div>
+            </div>
+
+
+            <div class="column-2 image">
+              <img
+                src="./assets/img1/shapes/points2.png"
+                class="points points2"
+                alt=""
+
+              />
+              <img src="./assets/img1/Polish_20230502_120721485.jpg" class="img-element z-index" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <h3 class="title" data-title="Who Am I">About me</h3>
+          </div>
+
+          <div class="section-body grid-2">
+            <div class="column-1">
+              <h3 class="title-sm">Hello, I'm</h3>
+              <p class="text">
+                I am 21 years old web developer, my passion is creating engaging and responsive websites that provide users with seamless experiences.
                 With a background in computer science and several years of experience in front-end development.
                 I have honed my skills in HTML, CSS, JavaScript, and jQuery, and I am always eager to learn new technologies.
-                Whether it's developing a custom WordPress theme or building a complex web application.</p>
+                Whether it's developing a custom WordPress theme or building a complex web application.
+              </p>
+              <div class="skills">
+                <div class="skill html">
+                  <h3 class="skill-title">HTML</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="10%"></div>
+                  </div>
+                </div>
+                <div class="skill css">
+                  <h3 class="skill-title">CSS</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50%"></div>
+                  </div>
+                </div>
+                <div class="skill js">
+                  <h3 class="skill-title">JavaScript</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn">Read more</a>
+            </div>
 
-        </article>
-        <aside></aside>
-    </section>
+            <div class="column-2 image">
+              <img src="./assets/img1/shapes/points4.png" class="points" alt="" />
+              <img src="./assets/img1/211014_Blog_Feature_Project_Environment-scaled-removebg-preview.png" class="z-index" alt="" />
+            </div>
+          </div>
+        </div>
 
 
-    <section>
-        <section>
 
-            <article>
-                <h3 ALIGN="CENTER">Education and Skill</h3>
-                <h4>Education</h4>
-                <p> Study at IJSE Software Campus As a Software Engineering
-                    G.C.E (A/L)
-                    G.C.E (O/L)</p>
+        <section class="project section">
+          <div class="container">
+            <div class="section-header">
+              <h3 class="title" data-title="Last News">My Projects</h3>
+              <p class="text">
+                Some Skill About Java,css and mysql
+              </p>
+            </div>
+
+            <div class="project-wrapper">
+              <div class="project-wrap">
+                <img
+                        src="./assets/img1/shapes/points3.png"
+                        alt=""
+                        class="points points-sq"
+                />
+
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="./assets/img1/video-hostelPMSsoftware.jpg" alt="" />
+                  </div>
+
+                  <div class="project-content">
+
+                    <h3 class="title-sm">Hostel Management </h3>
+                    <p class="project-text">
+                      Using  HibernateLayerd
+                    </p>
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-wrap">
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="./assets/img1/Hotel-Management-System.webp" alt="" />
+                  </div>
+
+                  <div class="project-content">
+                    <div class="project-info">
+
+                    </div>
+                    <h3 class="title-sm">Hotel System</h3>
+                    <p class="project-text">
+                      Using java fx,figma and html
+                    </p>
+
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-wrap">
+                <div class="project-card">
+                  <div class="project-image">
+                    <img src="./assets/img1/360_F_467889679_PyOiohQ6QP9cUWSmvjJtptd2p85XONSJ.jpg" alt="" />
+                  </div>
+
+                  <div class="project-content">
+                    <div class="project-info">
 
 
-                <h4>Skill</h4>
-                <p>php,javascript,mysql,c++</p>
-
-                <h3>tools</h3><br>
-                <img src="assets/img/icons8-php-96.png" WIDTH="9%">
-                <img src="assets/img/icons8-javascript-96.png "WIDTH="9%">
-                <img src="assets/img/icons8-c++-96.png"width="9%">
-                <img src="assets/img/icons8-sql-database-administrators-96.png" width="9%">
-                <img src="assets/img/icons8-java-96.png"WIDTH="9%">
-
-            </article>
-
+                    </div>
+                    <h3 class="title-sm">Connect for Game</h3>
+                    <p class="project-text">
+                      Using java fx,figma
+                    </p>
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-    </section>
 
-    <section>
-        <article>
-            <h3 ALIGN="CENTER">projects</h3>
+      </section>
+      <section class="services section" id="services">
 
-            <p>Game,Hotel Login System,SuperMarket System</p>
+          <div class="section-header">
+            <h3 class="title" data-title="What I Do">Services</h3>
+            <p class="text">
+             hire me
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card-wrap">
+              <img
+                      src="./assets/img1/shapes/points3.png"
+                      class="points points1 points-sq"
+                      alt=""
+              />
+              <div class="card" data-card="UI/UX">
+                <div class="card-content z-index">
+                  <img src="./assets/img1/design-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">Web Design</h3>
+                  <p class="text">
+                    Web design refers to the design of websites that are displayed on the internet.
+                    It usually refers to the user experience aspects of website development ...
+                  </p>
+                  <a href="#" class="btn small">Read more</a>
+                </div>
+              </div>
+            </div>
 
-            <img src="assets/img/pngtree-vector-video-game-icon-png-image_779455.jpg"width="9%">
-            <img src="assets/img/images.png"WIDTH="9%">
-            <img src="assets/img/download.png"WIDTH="9%">
-        </article>
-    </section>
+            <div class="card-wrap">
+              <div class="card" data-card="Code">
+                <div class="card-content z-index">
+                  <img src="./assets/img1/code-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">Web Development</h3>
+                  <p class="text">
+                    Web development is the work involved in developing a website for the Internet
+                    (World Wide Web) or an intranet (a private network). Web development can range ...
+                  </p>
+                  <a href="#" class="btn small">Read more</a>
+                </div>
+              </div>
+            </div>
 
-    <section>
-        <article>
-            <h3 ALIGN="CENTER">Contact Details</h3>
+            <div class="card-wrap">
+              <img
+                      src="./assets/img1/shapes/points3.png"
+                      class="points points2 points-sq"
+                      alt=""
+              />
+              <div class="card" data-card="App">
+                <div class="card-content z-index">
+                  <img src="assets/img1/app-icon.png" class="icon" alt="" />
+                  <h3 class="title-sm">App Development</h3>
+                  <p class="text">
+                    Mobile application development is the process of making software for smartphones,
+                    tablets and digital assistants, most commonly for the Android and iOS .
+                  </p>
+                  <a href="#" class="btn small">Read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="records">
+        <div class="overlay overlay-sm">
+          <img src="./assets/img1/shapes/square.png" alt="" class="shape square1" />
+          <img src="./assets/img1/shapes/square.png" alt="" class="shape square2" />
+          <img src="./assets/img1/shapes/circle.png" alt="" class="shape circle" />
+          <img
+                  src="./assets/img1/shapes/half-circle.png"
+                  alt=""
+                  class="shape half-circle"
+          />
+          <img src="./assets/img1/shapes/wave.png" alt="" class="shape wave wave1" />
+          <img src="./assets/img1/shapes/wave.png" alt="" class="shape wave wave2" />
+          <img src="./assets/img1/shapes/x.png" alt="" class="shape xshape" />
+          <img src="./assets/img1/shapes/triangle.png" alt="" class="shape triangle" />
+        </div>
 
-            <form>
-                <fieldset>
-                    <legend>Contact page</legend>
-                    <label for="name">name</label>
-                    <input type="text" id="name">
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                    <br>
-                    <label for="message">Message </label><br>
-                    <textarea id="message" rows="5"  placeholder="type message"></textarea>
-                    <br>
-                    <input type="submit">
+        <div class="container">
+          <div class="wrap">
+            <div class="record-circle">
+              <h2 class="number" data-num="235">7</h2>
+              <h4 class="sub-title">Projects</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle  ">
+              <h2 class="number" data-num="174">5</h2>
+              <h4 class="sub-title">Happy Clients</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle active">
+              <h2 class="number" data-num="892">12</h2>
+              <h4 class="sub-title">Work Hour</h4>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <div class="record-circle">
+              <h2 class="number" data-num="368">2</h2>
+              <h4 class="sub-title">Awards</h4>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
-                </fieldset>
 
-            </form>
-        </article>
-    </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-info">
+              <h3 class="title">Get in touch</h3>
+              <p class="text">
+                Ask More Details
+              </p>
+
+              <div class="information-wrap">
+                <div class="information">
+                  <div class="contact-icon">
+                    <li>
+                      <a href="#social"><img src="assets/img1/social.png"></a>
+
+                  </div>
+                 <a href="http://"></a> <p class="info-text">Chathura Navodya</p>
+                  </li>
+                </div>
 
 
-</main>
+                <div class="information">
+                  <div class="contact-icon">
+                    <li>
+                      <a href="#contact"><img src="assets/img1/mail.png"></a>
+                    </li>
 
-<footer>
-    <address></address>
-</footer>
-
-</body>
+                  </div>
+                  <p class="info-text">chathuranavodya@gmail.com</p>
+                </div>
 
 
+                <div class="information">
+                  <div class="contact-icon">
+                    <li>
+                      <a href="#whatsapp"><img src="assets/img1/whatsapp.png"></a>
+                    </li>
+
+                  </div>
+                  <p class="info-text">0740619191</p>
+                </div>
+
+              </div>
+            </div>
+            
+
+            <div class="contact-form">
+              <h3 class="title">Contact me</h3>
+              <div class="row">
+                <input
+                  type="text"
+                  class="contact-input"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  class="contact-input"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <div class="row">
+                <input type="text" class="contact-input" placeholder="Phone" />
+                <input type="email" class="contact-input" placeholder="Email" />
+              </div>
+
+              <div class="row">
+                <textarea
+                  name="message"
+                  class="contact-input textarea"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <a href="#" class="btn">Send</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="footer">
+
+
+          <div class=" footer-about">
+
+          </div>
+
+          <div class=" footer-links">
+            <h3 class="title-sm">Links</h3>
+            <ul>
+              <li>
+                <a href="#Home">Home</a>
+              </li>
+              <li>
+                <a href="#About">About</a>
+              </li>
+              <li>
+                <a href="#Projects">Projects</a>
+              </li>
+              <li>
+                <a href="#Services">Services</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class=" footer-links">
+            <h3 class="title-sm">Services</h3>
+            <ul>
+              <li>
+                <a href="#">Web Design</a>
+              </li>
+              <li>
+                <a href="#">Web Dev</a>
+              </li>
+              <li>
+                <a href="#">App Design</a>
+              </li>
+              <li>
+                <a href="#">Marketing</a>
+              </li>
+              <li>
+                <a href="#">UI Design</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-newstletter">
+            <h3 class="title-sm">Email</h3>
+            <p class="text">
+
+            </p>
+            <div class="footer-input-wrap">
+              <input type="email" class="footer-input" placeholder="Email" />
+              <a href="#" class="input-arrow">
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="followme-wrap">
+            <div class="followme">
+              <h3>Follow me</h3>
+              <span class="footer-line"></span>
+              <div class="social-media">
+                <a href="#">
+
+                  <i class="github-f"></i>
+                  <a href="#whatsapp"><img src="assets/img1/whatsapp.png"></a>
+                </a>
+                <a href="#">
+                  <i class="github"></i>
+                  <a href="#github"><img src="assets/img1/social.png"></a>
+                </a>
+                <a href="#">
+                  <i class="linkedin-in"></i>
+                  <a href="#linkedin"><img src="assets/img1/linkedin.png"></a>
+                </a>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+    </footer>
+
+  </body>
 </html>
-
-
-
-
-
-    
