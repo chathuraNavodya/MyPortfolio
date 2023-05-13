@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CaseTwo</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+
+        section{
+            position: relative;
+            /*display: grid;*/
+            background: cornflowerblue;
+            /*border: 1px solid black;*/
+            top: 0;
+            height: 100vh;
+        }
+        div{
+            position: absolute;
+            font-family: 'poppins', sans-serif;
+            top: 160px;
+            left: 493px;
+        }
+
+        #outsideCircle{
+            position: absolute;
+            /*border: 2px solid gray;*/
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 100%;
+            transition: 2s;
+        }
+        #outsideCircle>div:nth-child(1){
+            position: absolute;
+            background: red;
+            top: -31px;
+            left: 75px;
+            transform: rotate(315deg);
+            width: 150px;
+            height: 150px;
+            border-top-right-radius: 100%;
+        }
+        #fixedCircle{
+            top: 175px;
+            left: 508px;
+            position: absolute;
+            width: 270px;
+            height: 270px;
+            background: gray;
+            border-radius: 100%;
+        }
+
+        #fixedCircle>p{
+            color: white;
+            font-weight: bold;
+            font-size: 28px;
+            display: grid;
+            padding: 90px;
+            justify-content: center;
+        }
+
+        #outsideCircle:hover {
+            transform: rotate(360deg);
+            transition: 2s;
+            transition-timing-function: step-start;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div id="outsideCircle">
+        <div></div>
+    </div>
+
+    <div id="fixedCircle"><p>RAWD</p></div>
+</section>
+</body>
+</html>

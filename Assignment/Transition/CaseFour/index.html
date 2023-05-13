@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Four</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        section {
+            position: relative;
+            background: white;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid red;
+            border-radius: 100%;
+            display: grid;
+            justify-content: center;
+
+            animation: testOne;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+            animation-delay: 1ms;
+            animation-fill-mode: backwards;
+            animation-direction: normal;
+        }
+        @keyframes testOne {
+            0%{
+                width: 20px;
+                height: 20px;
+                border: 2px solid red;
+            }
+            100%{
+                width: 200px;
+                height: 200px;
+                border: 2px solid transparent;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div></div>
+</section>
+
+</body>
+</html>

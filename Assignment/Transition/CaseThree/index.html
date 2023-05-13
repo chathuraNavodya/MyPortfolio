@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Three</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        section {
+            position: relative;
+            background: white;
+            top: 0;
+            height: 100vh;
+        }
+        div{
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background: orange;
+            top: 10px;
+            left: 10px;
+            border-radius: 20px;
+
+            animation: testOne;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+
+        }
+        div:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes testOne {
+            0%{
+                top: 10px;
+                left: 10px;
+                background: blue;
+            }
+            25%{
+                top: 10px;
+                left: 1152px;
+                background: yellow;
+                transform: rotate(180deg);
+            }
+            50%{
+                top: 525px;
+                left: 1152px;
+                background: red;
+                transform: rotate(360deg);
+            }
+            75%{
+                top: 525px;
+                left: 10px;
+                background: deeppink;
+                transform: rotate(180deg);
+            }
+            100%{
+                top: 10px;
+                left: 10px;
+                background: orange;
+                transform: rotate(360deg);
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div></div>
+</section>
+
+</body>
+</html>
