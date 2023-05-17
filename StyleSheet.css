@@ -29,8 +29,22 @@ ul {
   list-style: none;
 }
 
-img {
-  width: 100%;
+
+.img-element {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+img{
+width: 100%;
 }
 
 .container {
@@ -393,6 +407,8 @@ header .circle {
 }
 
 .about img {
+
+
   max-width: 600px;
 }
 
@@ -450,7 +466,9 @@ header .circle {
 /* End About */
 
 
-/* project */
+
+
+/*Project and Assignment*/
 
 .project-wrapper {
   display: flex;
@@ -467,14 +485,14 @@ header .circle {
 }
 
 .project-card {
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   overflow: hidden;
   background-color:dodgerblue;
   transition: 0.3s;
   position: relative;
   margin-top: 50%;
-  margin-bottom: -1%;
+  margin-bottom: 20%;
 }
 
 .project-card:after {
@@ -510,11 +528,11 @@ header .circle {
   padding: 3rem  3rem 3rem;
 }.
 
-.project-info {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
+ .project-info {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 0.5rem;
+ }
 
 .project-text {
   margin: 0.5rem 0 1.5rem 0;
@@ -542,8 +560,7 @@ header .circle {
 
 
 }
-
-/* End project */
+/* End  project and Assignment */
 
 
 /* Services */
