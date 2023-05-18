@@ -247,20 +247,24 @@ nav .container {
 .links ul {
   display: flex;
 }
-.Media.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 
 .Media.icon img {
- margin-left: 90%;
+  margin-left: 10%;
   margin-right: 30px;
   margin-top: 20px;
   width: 40px;
   height: 40px;
+
 }
+.Media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
 
 
 .links a {
@@ -418,39 +422,47 @@ header .circle {
 }
 
 .skills {
-  margin: 1.5rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .skill {
-  margin: 1rem 0;
+  margin-bottom: 10px;
 }
 
 .skill-title {
-  color:red;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
+  margin-bottom: 18px;
 }
 
 .skill-bar {
-  width: 70%;
-  height: 8px;
-  border-radius: 4px;
-  background-color:blue;
+  width: 400%;
+  height: 10px;
+  background-color: #e0e0e0;
   position: relative;
+  border-radius: 7px;
   overflow: hidden;
 }
 
 .skill-progress {
+  width: 0;
+  height: 100%;
+  background-color: blue;
   position: absolute;
-  height: 90%;
-  width: 70%;
-  top: 0%;
-  left: 0%;
-  background-color:red;
-  transition: 9ms;
-
-
+  top: 0;
+  left: 0;
+  animation: skillProgress 29s;
 }
+
+@keyframes skillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 
 .about .column-1 {
   position: relative;
