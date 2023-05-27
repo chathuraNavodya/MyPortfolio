@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order-form</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: #32cd32">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pos System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="index.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Items.html">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="Orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="PlaceOrder.html">Place Orders</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                           style="background-color: white; color: black;">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+<section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+    <section class="row p-4 m-0 object-fit-contain col-12" id="orderDetails">
+        <section class="col border-dark m-3 border rounded object-fit-contain col-12" >
+            <h5 class="text-dark text-center m-lg-3 pb-3" >Order Details</h5>
+            <table class="table table-light table-striped">
+                <thead>
+                <tr>
+                    <th style="background-color: #0d6efd" scope="col">Oder ID</th>
+                    <th style="background-color: #0d6efd" scope="col">Date</th>
+                    <th style="background-color: #0d6efd" scope="col">Customer ID</th>
+                    <th style="background-color: #0d6efd" scope="col">Item ID</th>
+                    <th style="background-color: #0d6efd" scope="col">Qty</th>
+                    <th style="background-color: #0d6efd" scope="col">Discount</th>
+                    <th style="background-color: #0d6efd" scope="col">Total</th>
+                    <th style="background-color: #0d6efd" scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Ord-001</th>
+                    <td>2023-05-13</td>
+                    <td>C001</td>
+                    <td>I001</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>230</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ord-002</th>
+                    <td>2023-05-14</td>
+                    <td>C002</td>
+                    <td>I002</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>460</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ord-003</th>
+                    <td>2023-05-15</td>
+                    <td>C004</td>
+                    <td>I002</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>180</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ord-004</th>
+                    <td>2023-05-15</td>
+                    <td>C005</td>
+                    <td>I002</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>300</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ord-005</th>
+                    <td>2023-05-14</td>
+                    <td>C003</td>
+                    <td>I001</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>200</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Ord-006</th>
+                    <td>2023-05-14</td>
+                    <td>C008</td>
+                    <td>I002</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>100</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+    </section>
+</section>
+</body>
+</html>
