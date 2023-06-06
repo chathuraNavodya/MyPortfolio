@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>queue</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body {
+            background-color: #585858;
+        }
+
+        body > h3 {
+            position: relative;
+            top: 30px;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        section {
+            position: absolute;
+            width: 1000px;
+            height: 300px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            /*border: 1px solid black;*/
+        }
+
+        section > div {
+            display: flex;
+            height: 70px;
+            /*border: 1px solid black;*/
+            flex-grow: 1;
+            margin-left: 10px;
+            border-radius: 10px;
+        }
+
+        section > div:first-child {
+            align-self: start;
+            /*border: 1px solid green;*/
+        }
+
+        section > div:last-child {
+            align-self: end;
+            /*border: 1px solid green;*/
+        }
+
+    </style>
+</head>
+<body>
+<h3>java Script queue</h3>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+
+<script>
+    let colors = ["red", "yellow", "green", "blue", "deeppink", "orange"];
+
+    let divArray = document.querySelector("section").children;
+
+    for (let i = 0; i < divArray.length; i++) {
+        console.log(divArray[i]);
+        divArray[i].style.background = colors[i];
+    }
+
+    setInterval(function () {
+        for (let i = 0; i < divArray.length; i++) {
+            divArray[i].style.background = colors[i];
+        }
+        let lastValue = colors.pop();
+        colors.unshift(lastValue);
+
+    }, 500);
+
+</script>
+</body>
+</html>

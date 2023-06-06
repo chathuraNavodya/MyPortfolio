@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js que</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body {
+            background-color: #cbcbcb;
+        }
+
+        section {
+            position: absolute;
+            width: 1200px;
+            height: 600px;
+            top: 5vh;
+            left: 5vw;
+            display: flex;
+            /*border: 1px solid blue;*/
+            align-items: center;
+        }
+
+        section > h1 {
+            position: absolute;
+            top: 0;
+            left: 40vw;
+            margin-top: 0;
+            color: #ff253a;
+            font-size: 50px;
+        }
+
+        section > hr {
+            width: 740px;
+            position: absolute;
+            left: 0;
+            top: 378px;
+            background-color: #585858;
+            height: 1px;
+        }
+
+        section > div {
+            /*border: 1px solid black;*/
+            width: 140px;
+            height: 172px;
+            display: flex;
+            flex-grow: 1;
+            margin-right: 40px;
+            background-size: cover;
+            background-position: right;
+            background-image: url("assets/img/berjalan-walking.gif");
+        }
+
+        section > div > h2 {
+            color: #0dcaf0;
+            position: relative;
+            left: 70px;
+            margin: 0;
+        }
+
+        section > div:last-child {
+            /*border: 1px solid black;*/
+            width: 660px;
+            height: 230px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 0;
+            background-size: cover;
+            background-position: center;
+            background-image: url("assets/img/animatie_waarschuwingslicht_bij_alarm.gif");
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <h1>Js Que</h1>
+    <hr>
+    <div><h2></h2></div>
+    <div><h2></h2></div>
+    <div><h2></h2></div>
+    <div><h2></h2></div>
+    <div><h2></h2></div>
+    <div><h2></h2></div>
+    <div></div>
+</section>
+
+<script>
+    let text = ["A", "B", "C", "D", "E", "F"];
+    let divArray = document.querySelectorAll("h2");
+
+    for (let i = 0; i < divArray.length; i++) {
+        divArray[i].textContent = text[i];
+    }
+
+    setInterval(function () {
+        let lastValue = text.pop();
+        text.unshift(lastValue);
+
+        for (let i = 0; i < divArray.length; i++) {
+            divArray[i].textContent = text[i];
+        }
+    }, 1000);
+
+</script>
+</body>
+</html>
