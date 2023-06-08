@@ -43,7 +43,7 @@
 <body>
 <section>
     <main id="customer-section" >
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+        <section class="p-3 mb-2  text-emphasis-primary">
 
             <section class="row p-4 m-0 object-fit-contain col-12" id="customer">
                 <h2 class="text-success pt-5 m-lg-2">Manage Customers</h2>
@@ -51,35 +51,25 @@
                     <h5 class="text-dark text-center m-lg-3 pt-5">Add Customer</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="cId" class="form-label">ID</label>
-                            <input type="email" class="form-control">
+                            <label for="txtCustomerID" class="form-label">ID</label>
+                            <input type="cID" class="form-control"id="txtCustomerID">
                         </div>
                         <div class="col-md-6">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="name">
+                            <label for="txtCustomerName" class="form-label">Name</label>
+                            <input type="name" class="form-control" id="txtCustomerName">
                         </div>
                         <div class="col-md-6">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="email" class="form-control" id="address">
+                            <label for="txtCustomerAddress" class="form-label">Address</label>
+                            <input type="address" class="form-control" id="txtCustomerAddress">
                         </div>
                         <div class="col-md-6">
-                            <label for="contact" class="form-label">Contact</label>
-                            <input type="contact" class="form-control" id="contact">
-                        </div>
-
-
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <label for="txtCustomerContact" class="form-label">Contact</label>
+                            <input type="contact" class="form-control" id="txtCustomerContact">
                         </div>
                     </form>
+                    <div class="col-10">
+                        <button type="submit" id="cusSave" class="btn btn-primary">Save</button>
+                    </div>
 
                 </section>
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
@@ -87,54 +77,51 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #0d6efd" scope="col">Id</th>
-                            <th style="background-color: #0d6efd" scope="col">Name</th>
-                            <th style="background-color: #0d6efd" scope="col">Address</th>
-                            <th style="background-color: #0d6efd" scope="col">Contact</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+                            <th style="background-color:#32cd32" scope="col">Id</th>
+                            <th style="background-color:#32cd32" scope="col">Name</th>
+                            <th style="background-color: #32cd32" scope="col">Address</th>
+                            <th style="background-color: #32cd32" scope="col">Contact</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">C001</th>
+                        <tbody id="tblCustomer">
+                       <tr>
+                           <th scope="row">C001</th>
                             <td>kamal</td>
                             <td>Matara</td>
-                            <td>0777890789</td>
-                            <td>
+                         <td>0777890789</td><td>
                                 <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
+                               <button type="button" class="btn btn-danger">Delete</button>
+                     </tr>
                         <tr>
                             <th scope="row">C002</th>
                             <td>amal</td>
-                            <td>Galle</td>
+                           <td>Galle</td>
                             <td>0724580098</td>
                             <td>
                                 <button type="button" class="btn btn-warning">Edit</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C003</th>
-                            <td>Nimal</td>
-                            <td>Galle</td>
-                            <td>0774523123</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C004</th>
-                            <td>Kasun</td>
-                            <td>Galle</td>
-                            <td>0776786456</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
+-                            </td>
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th scope="row">C003</th>-->
+<!--                            <td>Nimal</td>-->
+<!--                            <td>Galle</td>-->
+<!--                            <td>0774523123</td>-->
+<!--                            <td>-->
+<!--                                <button type="button" class="btn btn-warning">Edit</button>-->
+<!--                                <button type="button" class="btn btn-danger">Delete</button>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <th scope="row">C004</th>-->
+<!--                            <td>Kasun</td>-->
+<!--                            <td>Galle</td>-->
+<!--                            <td>0776786456</td>-->
+<!--                            <td>-->
+<!--                                <button type="button" class="btn btn-warning">Edit</button>-->
+<!--                                <button type="button" class="btn btn-danger">Delete</button>-->
+<!--                            </td>-->
+<!--                        </tr>-->
 
 
                         </tbody>
@@ -148,7 +135,7 @@
     <!--    item ----------------------------------------------------->
 
     <main id="item-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+        <section class="p-3 mb-2  text-emphasis-primary">
 
             <section class="row p-4 m-0 object-fit-contain col-12" id="item">
                 <h2 class="text-success pt-5 m-lg-2">Manage Item</h2>
@@ -192,11 +179,11 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #0d6efd" scope="col">Id</th>
-                            <th style="background-color: #0d6efd" scope="col">Description</th>
-                            <th style="background-color: #0d6efd" scope="col">UnitPrice</th>
-                            <th style="background-color: #0d6efd" scope="col">Qty</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+                            <th style="background-color: #32cd32" scope="col">Id</th>
+                            <th style="background-color: #32cd32" scope="col">Description</th>
+                            <th style="background-color: #32cd32" scope="col">UnitPrice</th>
+                            <th style="background-color: #32cd32" scope="col">Qty</th>
+                            <th style="background-color: #32cd32" scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -250,23 +237,23 @@
         </section>
     </main>
 
-    <!--    order ------------------------------------------------->
+        order ------------------------------------------------->
     <main id="order-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+        <section class="p-3 mb-2  text-emphasis-primary">
             <section class="row p-4 m-0 object-fit-contain col-12" id="orderDetails">
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Order Details</h5>
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #0d6efd" scope="col">Oder ID</th>
-                            <th style="background-color: #0d6efd" scope="col">Date</th>
-                            <th style="background-color: #0d6efd" scope="col">Customer ID</th>
-                            <th style="background-color: #0d6efd" scope="col">Item ID</th>
-                            <th style="background-color: #0d6efd" scope="col">Qty</th>
-                            <th style="background-color: #0d6efd" scope="col">Discount</th>
-                            <th style="background-color: #0d6efd" scope="col">Total</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+                            <th style="background-color: #32cd32" scope="col">Oder ID</th>
+                            <th style="background-color: #32cd32" scope="col">Date</th>
+                            <th style="background-color: #32cd32" scope="col">Customer ID</th>
+                            <th style="background-color: #32cd32" scope="col">Item ID</th>
+                            <th style="background-color: #32cd32" scope="col">Qty</th>
+                            <th style="background-color: #32cd32" scope="col">Discount</th>
+                            <th style="background-color: #32cd32" scope="col">Total</th>
+                            <th style="background-color: #32cd32" scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -359,7 +346,7 @@
 
     <!--    place order -------------------------------------->
     <main id="placeOrder-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+        <section class="p-3 mb-2  text-emphasis-primary">
             <h2 class="text-success pt-5 m-lg-2">Place Order</h2>
             <section class="col border-dark m-3 border rounded object-fit-contain">
                 <form class="row g-3">
@@ -413,13 +400,13 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #0d6efd" scope="col">OrderID</th>
-                            <th style="background-color: #0d6efd" scope="col">ItemID</th>
-                            <th style="background-color: #0d6efd" scope="col">Description</th>
-                            <th style="background-color: #0d6efd" scope="col">Qty</th>
-                            <th style="background-color: #0d6efd" scope="col">UnitPrice</th>
-                            <th style="background-color: #0d6efd" scope="col">Total</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+                            <th style="background-color: #32cd32" scope="col">OrderID</th>
+                            <th style="background-color: #32cd32" scope="col">ItemID</th>
+                            <th style="background-color: #32cd32" scope="col">Description</th>
+                            <th style="background-color: #32cd32" scope="col">Qty</th>
+                            <th style="background-color: #32cd32" scope="col">UnitPrice</th>
+                            <th style="background-color: #32cd32" scope="col">Total</th>
+                            <th style="background-color: #32cd32" scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -485,18 +472,18 @@
             </section>
         </section>
 
-    </main>
+    </main>-->
 
 
 </section>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 
 
-<script>
+<!--<script>
 
     document.getElementById("customer-section");
     document.getElementById("item-section").style.display="none";
@@ -532,22 +519,23 @@
         document.getElementById("placeOrder-section").style.display="block";
     });
 
-</script>
+</script>-->
+<script src="assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/jquery-3.7.0.min.js">
 
 
-    $("#SaveCusBtn").click(function(){
-        let id= $ ("#txtCutomerID").val()
-        let name=  $ ("#txtCustomerName").val();
-        let address=  $ ("#txtCustomerAddress").val();
-        let contact = $ ("#txtCustomerContact").val();
+    $("#cusSave").click(function() {
+        let CustomerID = $("#txtCustomerID").val()
+        let CustomerName = $("#txtCustomerName").val();
+        let CustomerAddress = $("#txtCustomerAddress").val();
+        let CustomerContact = $("#txtCustomerContact").val();
 
-        console.log(id,name,address,contact);
+        console.log(CustomerID, CustomerName, CustomerAddress, CustomerContact);
 
-        let tBody=$("#tblCustomer").val();
-        let tr= $
+        let row=$('<tr> <td>'+CustomerID+'</td>  <td>'+CustomerName+'</td> <td>'+CustomerAddress+'</td> <td>'+CustomerContact+'</td> </tr>');
 
-      
+
+     $("#tblCustomer").append(row);
     });
 
 </script>
