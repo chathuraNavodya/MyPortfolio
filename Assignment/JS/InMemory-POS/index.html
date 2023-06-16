@@ -68,7 +68,7 @@
                         </div>
                     </form>
                     <div class="col-10">
-                        <button type="submit" id="cusSave" class="btn btn-primary">Save</button>
+                        <button type="submit" id="cusSave" class="btn btn-primary">cusSave</button>
                     </div>
 
                 </section>
@@ -91,37 +91,7 @@
                          <td>0777890789</td><td>
                                 <button type="button" class="btn btn-warning">Edit</button>
                                <button type="button" class="btn btn-danger">Delete</button>
-                     </tr>
-                        <tr>
-                            <th scope="row">C002</th>
-                            <td>amal</td>
-                           <td>Galle</td>
-                            <td>0724580098</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
--                            </td>
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <th scope="row">C003</th>-->
-<!--                            <td>Nimal</td>-->
-<!--                            <td>Galle</td>-->
-<!--                            <td>0774523123</td>-->
-<!--                            <td>-->
-<!--                                <button type="button" class="btn btn-warning">Edit</button>-->
-<!--                                <button type="button" class="btn btn-danger">Delete</button>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <th scope="row">C004</th>-->
-<!--                            <td>Kasun</td>-->
-<!--                            <td>Galle</td>-->
-<!--                            <td>0776786456</td>-->
-<!--                            <td>-->
-<!--                                <button type="button" class="btn btn-warning">Edit</button>-->
-<!--                                <button type="button" class="btn btn-danger">Delete</button>-->
-<!--                            </td>-->
-<!--                        </tr>-->
+
 
 
                         </tbody>
@@ -143,33 +113,28 @@
                     <h5 class="text-dark text-center m-lg-3 pt-5">Add Item</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="cId" class="form-label">ID</label>
-                            <input type="email" class="form-control" id="cId">
+                            <label for="txtItemId" class="form-label">ID</label>
+                            <input type="id" class="form-control" id="txtItemId">
                         </div>
                         <div class="col-md-6">
                             <label for="description" class="form-label">Description</label>
-                            <input type="password" class="form-control">
+                            <input type="description" class="form-control" id="txtItemDescription">
                         </div>
                         <div class="col-md-6">
                             <label for="unitPrice" class="form-label">Unit Price</label>
-                            <input type="email" class="form-control">
+                            <input type="unitPrice" class="form-control" id="txtItemUnitprice">
                         </div>
                         <div class="col-md-6">
                             <label for="qty" class="form-label">Qty</label>
-                            <input type="password" class="form-control">
+                            <input type="qty" class="form-control" id="txtItemQty">
                         </div>
 
 
                         <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button class="btn btn-primary" id="saveItmBtn">Save</button>
+                            <button class="btn btn-success" id="updateItmBtn">Update</button>
+                            <button class="btn btn-danger" id="deleteItmBtn">Delete</button>
+                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>
                         </div>
                     </form>
 
@@ -182,57 +147,15 @@
                             <th style="background-color: #32cd32" scope="col">Id</th>
                             <th style="background-color: #32cd32" scope="col">Description</th>
                             <th style="background-color: #32cd32" scope="col">UnitPrice</th>
-                            <th style="background-color: #32cd32" scope="col">Qty</th>
-                            <th style="background-color: #32cd32" scope="col">Action</th>
+                            <th style="background-color:#32cd32" scope="col">Qty</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">I001</th>
-                            <td>milk</td>
-                            <td>RS.400</td>
-                            <td>2</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I002</th>
-                            <td>rice</td>
-                            <td>RS.200</td>
-                            <td>5</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I003</th>
-                            <td>ice cream</td>
-                            <td>RS.150</td>
-                            <td>15</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I004</th>
-                            <td>apple</td>
-                            <td>RS.75</td>
-                            <td>20</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-
-
+                        <tbody id="tblItem">
                         </tbody>
                     </table>
                 </section>
             </section>
+
 
         </section>
     </main>
@@ -270,71 +193,7 @@
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">Ord-002</th>
-                            <td>2023-05-14</td>
-                            <td>C002</td>
-                            <td>I002</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>460</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-003</th>
-                            <td>2023-05-15</td>
-                            <td>C004</td>
-                            <td>I002</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>180</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-004</th>
-                            <td>2023-05-15</td>
-                            <td>C005</td>
-                            <td>I002</td>
-                            <td>4</td>
-                            <td>0</td>
-                            <td>300</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-005</th>
-                            <td>2023-05-14</td>
-                            <td>C003</td>
-                            <td>I001</td>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>200</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-006</th>
-                            <td>2023-05-14</td>
-                            <td>C008</td>
-                            <td>I002</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>100</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
+
 
 
                         </tbody>
@@ -524,22 +383,172 @@
 <script src="assets/js/jquery-3.7.0.min.js">
 
 
-    $("#cusSave").click(function() {
-        let CustomerID = $("#txtCustomerID").val()
-        let CustomerName = $("#txtCustomerName").val();
-        let CustomerAddress = $("#txtCustomerAddress").val();
-        let CustomerContact = $("#txtCustomerContact").val();
 
-        console.log(CustomerID, CustomerName, CustomerAddress, CustomerContact);
+        var customerDB = []; //literal base array
 
-        let row=$('<tr> <td>'+CustomerID+'</td>  <td>'+CustomerName+'</td> <td>'+CustomerAddress+'</td> <td>'+CustomerContact+'</td> </tr>');
+        $("#saveCusBtn").click(function () {
 
+        let customerId = $("#txtCustomerId").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerContact = $("#txtCustomerContact").val();
 
-     $("#tblCustomer").append(row);
+        let customer = [customerId, customerName, customerAddress, customerContact];
+
+        let customerOb = {
+        id: customerId,
+        name: customerName,
+        address: customerAddress,
+        contact: customerContact
+    }
+
+        console.log(customerId, customerName, customerAddress, customerContact);
+
+        let row = `<tr>
+        <td>${customerId}</td>
+        <td>${customerName}</td>
+        <td>${customerAddress}</td>
+        <td>${customerContact}</td>
+        </tr>`;
+
+        $("#tblCustomer").append(row);
+        customerDB.push(customerOb);
     });
+
+
+
+        $("#tblCustomer").on("click", "tr", function () {
+        let customerId = $(this).find('td:eq(0)').text();
+        let customerName = $(this).find('td:eq(1)').text();
+        let customerAddress = $(this).find('td:eq(2)').text();
+        let customerContact = $(this).find('td:eq(3)').text();
+
+        //set value to textField
+        $("#txtCustomerId").val(customerId);
+        $("#txtCustomerName").val(customerName);
+        $("#txtCustomerAddress").val(customerAddress);
+        $("#txtCustomerContact").val(customerContact);
+    })
+
+
+
+
+
+
+        $('#getAllItmBtn').click(function () {
+        getAllCustomer();
+    });
+
+
+        $('#deleteCusBtn').click(function () {
+        let id= $("#txtCustomerId").val();
+
+        let consent= confirm("Do you want to delete.?");
+        if (consent) {
+        let response= deleteCustomer(id);
+        if (response){
+        alert("Customer Deleted");
+        getAllCustomer();
+    }else{
+        alert("Customer Not Removed..!");
+    }
+    }
+    });
+
+
+
+        $('#updateCusBtn').click(function () {
+        let id= $("#txtCustomerId").val();
+        updateCustomer(id);
+
+    })
+
+        function deleteCustomer(id){
+        for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == id) {
+        customerDB.splice(i,1);
+        return true;
+    }
+    }
+        return false;
+    }
+
+        function updateCustomer(id){
+        if (searchCustomer(id)==undefined) {
+        alert("No such Customer..please check the ID");
+    }else{
+        let consent= confirm("Do you really want to update this customer.?");
+        if (consent) {
+        let customer= searchCustomer(id);
+        //if the customer available can we update.?
+
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerContact = $("#txtCustomerContact").val();
+
+        customer.name=customerName;
+        customer.address=customerAddress;
+        customer.contact=customerContact;
+
+        getAllCustomer();
+    }
+    }
+
+    }
+
+        function searchCustomer(id){
+        return customerDB.find(function (customer){
+        return  customer.id==id;
+    });
+    }
+
+        //bind table tr events
+        function bindTrEvents(){
+        $('#tblCustomer>tr').click(function(){
+            //get the selected rows data
+            let id=$(this).children().eq(0).text();
+            let name=$(this).children().eq(1).text();
+            let address=$(this).children().eq(2).text();
+            let contact=$(this).children().eq(3).text();
+
+            //set the selected rows data to the input fields
+            $("#txtCustomerId").val(id);
+            $("#txtCustomerName").val(name);
+            $("#txtCustomerAddress").val(address);
+            $("#txtCustomerContact").val(contact);
+        })
+    }
+
+
+
+        function getAllCustomer() {
+        $("#tblCustomer").empty();
+
+        //get all customers
+        for (let i = 0; i < customerDB.length; i++) {
+        let id = customerDB[i].id;
+        let name = customerDB[i].name;
+        let address = customerDB[i].address;
+        let contact = customerDB[i].contact;
+
+        let row = `<tr>
+                     <td>${id}</td>
+                     <td>${name}</td>
+                     <td>${address}</td>
+                     <td>${contact}</td>
+                    </tr>`;
+
+        // //and then append the row to tableBody
+        $("#tblCustomer").append(row);
+
+        bindTrEvents();
+    }
+    }
+
 
 </script>
 
 
+</script>
 </body>
 </html>

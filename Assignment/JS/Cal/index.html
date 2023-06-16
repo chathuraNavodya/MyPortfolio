@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        section {
+            position: absolute;
+            display: flex;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 650px;
+            height: 490px;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            flex-wrap: wrap;
+
+            background: rgb(59, 53, 220);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(1.5px);
+            -webkit-backdrop-filter: blur(1.5px);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        div {
+            /*border: 1px solid white;*/
+            display: flex;
+            flex-grow: 1;
+            height: 64px;
+            border-radius:50px;
+            flex-wrap: wrap;
+            width: 120px;
+            margin: 10px;
+        }
+
+        .cal-display {
+            background-color: #f6ff00;
+            width: 450px;
+            border-radius: 10px;
+            justify-content: right;
+        }
+
+        .cal-display > h2 {
+            color: black;
+            font-weight: normal;
+            font-size: 20px;
+            /*margin: auto;*/
+        }
+
+        .btn {
+            cursor: pointer;
+            background: linear-gradient(to right, #f6ff00, #8b8484);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            transition-duration: 0.2s;
+        }
+
+        .btn > h2 {
+            color: #0d0e0e;
+            font-weight: bold;
+            font-size: 45px;
+            margin: auto;
+        }
+
+        div:nth-child(1) {
+            background: linear-gradient(to right, #3dff07, #fc0c0c);
+        }
+
+        div:nth-child(6) {
+            background: linear-gradient(to right, #e70a1d, #f6ff00);
+        }
+
+        div:nth-child(10) {
+            background: linear-gradient(to right, #e70a1d, #f6ff00);
+        }
+
+        div:nth-child(14) {
+            background: linear-gradient(to right, #e70a1d, #f6ff00);
+        }
+
+        div:nth-child(18) {
+            background: linear-gradient(to right, #e70a1d, #f6ff00);
+        }
+
+        div:nth-child(17) {
+            background: linear-gradient(to right, #e70a1d, #0d6efd);
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div id="ClearBtn" class="btn"><h2>C</h2></div>
+    <div id="display" class="cal-display"><h2></h2></div>
+    <div id="Nine" class="btn"><h2>9</h2></div>
+    <div id="Eight" class="btn"><h2>8</h2></div>
+    <div id="Seven" class="btn"><h2>7</h2></div>
+    <div id="AddBtn" class="btn"><h2>+</h2></div>
+    <div id="Six" class="btn"><h2>6</h2></div>
+    <div id="Five" class="btn"><h2>5</h2></div>
+    <div id="Four" class="btn"><h2>4</h2></div>
+    <div id="SubtractBtn" class="btn"><h2>-</h2></div>
+    <div id="Three" class="btn"><h2>3</h2></div>
+    <div id="Two" class="btn"><h2>2</h2></div>
+    <div id="One" class="btn"><h2>1</h2></div>
+    <div id="DivideBtn" class="btn"><h2>/</h2></div>
+    <div id="Zero" class="btn"><h2>0</h2></div>
+    <div id="DecimalPointBtn" class="btn"><h2>.</h2></div>
+    <div id="EqualBtn" class="btn"><h2>=</h2></div>
+    <div id="MultiplyBtn" class="btn"><h2>*</h2></div>
+</section>
+
+<script src="assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        var displayValue = "";
+
+
+        function updateDisplay() {
+            $('#display h2').text(displayValue);
+        }
+
+
+        $('.btn').not('#ClearBtn, #EqualBtn').click(function () {
+            var value = $(this).text();
+            displayValue += value;
+            updateDisplay();
+        });
+
+
+        $('#ClearBtn').click(function () {
+            displayValue = "";
+            updateDisplay();
+        });
+
+
+        $('#EqualBtn').click(function () {
+            displayValue = eval(displayValue);
+            updateDisplay();
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
