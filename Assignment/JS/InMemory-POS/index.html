@@ -5,9 +5,11 @@
     <title>DOM manipulation</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: #32cd32">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: #3dff07">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Pos System</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -17,17 +19,17 @@
             </button>
             <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" >
-                        <a id="nav-Customers" class="nav-link text-white" aria-current="page" href="#customer-section">Customer</a>
+                    <li class="nav-item">
+                        <a id="nav-Customers" class="nav-link text-black" aria-current="page" href="#customer-section">Customer</a>
                     </li>
-                    <li class="nav-item" >
-                        <a id="nav-Items" class="nav-link text-white" href="#item-section">Items</a>
+                    <li class="nav-item">
+                        <a id="nav-Items" class="nav-link text-black" href="#item-section">Items</a>
                     </li>
-                    <li class="nav-item" >
-                        <a id="nav-Orders" class="nav-link text-white" href="#order-section">Orders</a>
+                    <li class="nav-item">
+                        <a id="nav-Orders" class="nav-link text-black" href="#order-section">Orders</a>
                     </li>
-                    <li class="nav-item" >
-                        <a id="nav-PlaceOrders" class="nav-link text-white" href="#placeOrder-section">Place Orders</a>
+                    <li class="nav-item">
+                        <a id="nav-PlaceOrders" class="nav-link text-black" href="#placeOrder-section">Place Orders</a>
                     </li>
 
                 </ul>
@@ -42,70 +44,67 @@
 </header>
 <body>
 <section>
-    <main id="customer-section" >
-        <section class="p-3 mb-2  text-emphasis-primary">
+    <main id="customer-section">
 
-            <section class="row p-4 m-0 object-fit-contain col-12" id="customer">
+
+            <section class="row p-3 m-0 object-fit-contain col-12" id="customer">
                 <h2 class="text-success pt-5 m-lg-2">Manage Customers</h2>
                 <section class="col border-dark m-3 border rounded object-fit-contain">
                     <h5 class="text-dark text-center m-lg-3 pt-5">Add Customer</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="txtCustomerID" class="form-label">ID</label>
-                            <input type="cID" class="form-control"id="txtCustomerID">
+                            <label for="txtCustomerId">ID</label>
+                            <input type="text" class="form-control" id="txtCustomerId">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtCustomerName" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="txtCustomerName">
+                            <label for="txtCustomerName">Name</label>
+                            <input type="text" class="form-control" id="txtCustomerName">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtCustomerAddress" class="form-label">Address</label>
-                            <input type="address" class="form-control" id="txtCustomerAddress">
+                            <label for="txtCustomerAddress">Address</label>
+                            <input type="text" class="form-control" id="txtCustomerAddress">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtCustomerContact" class="form-label">Contact</label>
-                            <input type="contact" class="form-control" id="txtCustomerContact">
+                            <label for="txtCustomerContact">Contact</label>
+                            <input type="text" class="form-control" id="txtCustomerContact">
+                        </div>
+
+
+                        <div class="col-12 m-3" >
+                            <button class="btn btn-danger" id="saveCusBtn">Save</button>
+                            <button class="btn btn-secondary" id="updateCusBtn">Update</button>
+                            <button class="btn btn-success" id="deleteCusBtn">Delete</button>
+                            <button class="btn btn-warning" id="getAllCusBtn">getAll</button>
                         </div>
                     </form>
-                    <div class="col-10">
-                        <button type="submit" id="cusSave" class="btn btn-primary">cusSave</button>
-                    </div>
 
                 </section>
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Customer Details</h5>
                     <table class="table table-light table-striped">
-                        <thead>
+                        <thead class="bg-danger text-black">
                         <tr>
-                            <th style="background-color:#32cd32" scope="col">Id</th>
-                            <th style="background-color:#32cd32" scope="col">Name</th>
-                            <th style="background-color: #32cd32" scope="col">Address</th>
-                            <th style="background-color: #32cd32" scope="col">Contact</th>
+                            <th style="background-color: #3dff07" scope="col">Id</th>
+                            <th style="background-color: #3dff07" scope="col">Name</th>
+                            <th style="background-color: #3dff07" scope="col">Address</th>
+                            <th style="background-color: #3dff07" scope="col">Contact</th>
+
                         </tr>
                         </thead>
                         <tbody id="tblCustomer">
-                       <tr>
-                           <th scope="row">C001</th>
-                            <td>kamal</td>
-                            <td>Matara</td>
-                         <td>0777890789</td><td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                               <button type="button" class="btn btn-danger">Delete</button>
-
-
-
                         </tbody>
+
                     </table>
                 </section>
             </section>
 
-        </section>
+
     </main>
 
-    <!--    item ----------------------------------------------------->
+    <!--    item --->
 
     <main id="item-section" class="tab-contents">
-        <section class="p-3 mb-2  text-emphasis-primary">
+
 
             <section class="row p-4 m-0 object-fit-contain col-12" id="item">
                 <h2 class="text-success pt-5 m-lg-2">Manage Item</h2>
@@ -130,11 +129,11 @@
                         </div>
 
 
-                        <div class="col-12">
-                            <button class="btn btn-primary" id="saveItmBtn">Save</button>
-                            <button class="btn btn-success" id="updateItmBtn">Update</button>
-                            <button class="btn btn-danger" id="deleteItmBtn">Delete</button>
-                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>
+                        <div class="col-12 m-3">
+                            <button class="btn btn-danger" id="saveItmBtn">Save</button>
+                            <button class="btn btn-secondary" id="updateItmBtn">Update</button>
+                            <button class="btn btn-success" id="deleteItmBtn">Delete</button>
+                            <button class="btn btn-warning" id="getAllItmBtn">getAll</button>
                         </div>
                     </form>
 
@@ -144,10 +143,10 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #32cd32" scope="col">Id</th>
-                            <th style="background-color: #32cd32" scope="col">Description</th>
-                            <th style="background-color: #32cd32" scope="col">UnitPrice</th>
-                            <th style="background-color:#32cd32" scope="col">Qty</th>
+                            <th style="background-color: #3dff07" scope="col">Id</th>
+                            <th style="background-color: #3dff07" scope="col">Description</th>
+                            <th style="background-color: #3dff07" scope="col">UnitPrice</th>
+                            <th style="background-color: #3dff07" scope="col">Qty</th>
                         </tr>
                         </thead>
                         <tbody id="tblItem">
@@ -157,39 +156,90 @@
             </section>
 
 
-        </section>
     </main>
 
-        order ------------------------------------------------->
+    <!--    order -->
     <main id="order-section" class="tab-contents">
-        <section class="p-3 mb-2  text-emphasis-primary">
+
             <section class="row p-4 m-0 object-fit-contain col-12" id="orderDetails">
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Order Details</h5>
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #32cd32" scope="col">Oder ID</th>
-                            <th style="background-color: #32cd32" scope="col">Date</th>
-                            <th style="background-color: #32cd32" scope="col">Customer ID</th>
-                            <th style="background-color: #32cd32" scope="col">Item ID</th>
-                            <th style="background-color: #32cd32" scope="col">Qty</th>
-                            <th style="background-color: #32cd32" scope="col">Discount</th>
-                            <th style="background-color: #32cd32" scope="col">Total</th>
-                            <th style="background-color: #32cd32" scope="col">Action</th>
+                            <th style="background-color: #3dff07" scope="col">Oder ID</th>
+                            <th style="background-color: #3dff07" scope="col">Date</th>
+                            <th style="background-color: #3dff07" scope="col">Customer ID</th>
+                            <th style="background-color: #3dff07" scope="col">Item ID</th>
+                            <th style="background-color: #3dff07" scope="col">Qty</th>
+                            <th style="background-color: #3dff07" scope="col">Discount</th>
+                            <th style="background-color: #3dff07" scope="col">Total</th>
+                            <th style="background-color: #3dff07" scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <th scope="row">Ord-001</th>
-                            <td>2023-09-13</td>
+                            <td>2023-05-13</td>
                             <td>C001</td>
                             <td>I001</td>
                             <td>1</td>
                             <td>0</td>
                             <td>230</td>
                             <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ord-002</th>
+                            <td>2023-05-14</td>
+                            <td>C002</td>
+                            <td>I002</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>460</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ord-003</th>
+                            <td>2023-05-15</td>
+                            <td>C004</td>
+                            <td>I002</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>180</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ord-004</th>
+                            <td>2023-05-15</td>
+                            <td>C005</td>
+                            <td>I002</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>300</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ord-005</th>
+                            <td>2023-05-14</td>
+                            <td>C003</td>
+                            <td>I001</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>200</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">Edit</button>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
@@ -200,12 +250,12 @@
                     </table>
                 </section>
             </section>
-        </section>
+
     </main>
 
-    <!--    place order -------------------------------------->
+    <!--    place order -->
     <main id="placeOrder-section" class="tab-contents">
-        <section class="p-3 mb-2  text-emphasis-primary">
+
             <h2 class="text-success pt-5 m-lg-2">Place Order</h2>
             <section class="col border-dark m-3 border rounded object-fit-contain">
                 <form class="row g-3">
@@ -247,9 +297,9 @@
                         <input type="text" class="form-control" id="qty">
                     </div>
 
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Add Cart</button>
-                        <button type="submit" class="btn btn-warning">Cansel</button>
+                    <div class="col-12 m-3">
+                        <button type="submit" class="btn btn-secondary">Add Cart</button>
+                        <button type="submit" class="btn btn-danger">Cansel</button>
                     </div>
                 </form>
 
@@ -259,296 +309,88 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #32cd32" scope="col">OrderID</th>
-                            <th style="background-color: #32cd32" scope="col">ItemID</th>
-                            <th style="background-color: #32cd32" scope="col">Description</th>
-                            <th style="background-color: #32cd32" scope="col">Qty</th>
-                            <th style="background-color: #32cd32" scope="col">UnitPrice</th>
-                            <th style="background-color: #32cd32" scope="col">Total</th>
-                            <th style="background-color: #32cd32" scope="col">Action</th>
+                            <th style="background-color: #3dff07" scope="col">OrderID</th>
+                            <th style="background-color: #3dff07" scope="col">ItemID</th>
+                            <th style="background-color: #3dff07" scope="col">Description</th>
+                            <th style="background-color: #3dff07" scope="col">Qty</th>
+                            <th style="background-color: #3dff07" scope="col">UnitPrice</th>
+                            <th style="background-color: #3dff07" scope="col">Total</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">Ord-001</th>
-                            <td>I001</td>
-                            <td>milk</td>
-                            <td>2</td>
-                            <td>RS.400</td>
-                            <td>800</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-002</th>
-                            <td>I002</td>
-                            <td>rice</td>
-                            <td>1</td>
-                            <td>RS.200</td>
-                            <td>400</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-003</th>
-                            <td>I003</td>
-                            <td>ice cream</td>
-                            <td>2</td>
-                            <td>RS.150</td>
-                            <td>300</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-004</th>
-                            <td>I001</td>
-                            <td>apple</td>
-                            <td>1</td>
-                            <td>RS.150</td>
-                            <td>300</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-
                         </tbody>
                     </table>
                     <div class="col-md-2">
                         <input type="Total" class="form-control" id="total" placeholder="TotalPrice :">
                     </div>
                 </section>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-success">PlaceOrder</button>
-                    <button type="submit" class="btn btn-danger">Cansel</button>
+                <div class="col-12 m-3">
+                    <button type="submit" class="btn btn-primary">PlaceOrder</button>
+                    <button type="submit" class="btn btn-success">Cansel</button>
                 </div>
             </section>
-        </section>
 
-    </main>-->
+
+    </main>
 
 
 </section>
 
+<script src="assets/js/bootstrap.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-
-
-<!--<script>
+<script>
 
     document.getElementById("customer-section");
-    document.getElementById("item-section").style.display="none";
-    document.getElementById("order-section").style.display="none";
-    document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("item-section").style.display = "none";
+    document.getElementById("order-section").style.display = "none";
+    document.getElementById("placeOrder-section").style.display = "none";
 
 
-    document.getElementById("nav-Customers").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="block";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Customers").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "block";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-Items").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="block";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Items").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "block";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-Orders").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="block";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Orders").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "block";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-PlaceOrders").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="block";
+    document.getElementById("nav-PlaceOrders").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "block";
     });
 
-</script>-->
+</script>
+
 <script src="assets/js/jquery-3.7.0.min.js"></script>
-<script src="assets/js/jquery-3.7.0.min.js">
+<script src="assets/db/db.js"></script>
+<!-- customer script-->
 
+<script src="assets/Controller/customerController.js"></script>
 
+<!--item script--->
 
-        var customerDB = []; //literal base array
-
-        $("#saveCusBtn").click(function () {
-
-        let customerId = $("#txtCustomerId").val();
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerContact = $("#txtCustomerContact").val();
-
-        let customer = [customerId, customerName, customerAddress, customerContact];
-
-        let customerOb = {
-        id: customerId,
-        name: customerName,
-        address: customerAddress,
-        contact: customerContact
-    }
-
-        console.log(customerId, customerName, customerAddress, customerContact);
-
-        let row = `<tr>
-        <td>${customerId}</td>
-        <td>${customerName}</td>
-        <td>${customerAddress}</td>
-        <td>${customerContact}</td>
-        </tr>`;
-
-        $("#tblCustomer").append(row);
-        customerDB.push(customerOb);
-    });
-
-
-
-        $("#tblCustomer").on("click", "tr", function () {
-        let customerId = $(this).find('td:eq(0)').text();
-        let customerName = $(this).find('td:eq(1)').text();
-        let customerAddress = $(this).find('td:eq(2)').text();
-        let customerContact = $(this).find('td:eq(3)').text();
-
-        //set value to textField
-        $("#txtCustomerId").val(customerId);
-        $("#txtCustomerName").val(customerName);
-        $("#txtCustomerAddress").val(customerAddress);
-        $("#txtCustomerContact").val(customerContact);
-    })
+<script src="assets/Controller/itemController.js"></script>
 
 
 
 
 
 
-        $('#getAllItmBtn').click(function () {
-        getAllCustomer();
-    });
-
-
-        $('#deleteCusBtn').click(function () {
-        let id= $("#txtCustomerId").val();
-
-        let consent= confirm("Do you want to delete.?");
-        if (consent) {
-        let response= deleteCustomer(id);
-        if (response){
-        alert("Customer Deleted");
-        getAllCustomer();
-    }else{
-        alert("Customer Not Removed..!");
-    }
-    }
-    });
-
-
-
-        $('#updateCusBtn').click(function () {
-        let id= $("#txtCustomerId").val();
-        updateCustomer(id);
-
-    })
-
-        function deleteCustomer(id){
-        for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
-        customerDB.splice(i,1);
-        return true;
-    }
-    }
-        return false;
-    }
-
-        function updateCustomer(id){
-        if (searchCustomer(id)==undefined) {
-        alert("No such Customer..please check the ID");
-    }else{
-        let consent= confirm("Do you really want to update this customer.?");
-        if (consent) {
-        let customer= searchCustomer(id);
-        //if the customer available can we update.?
-
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerContact = $("#txtCustomerContact").val();
-
-        customer.name=customerName;
-        customer.address=customerAddress;
-        customer.contact=customerContact;
-
-        getAllCustomer();
-    }
-    }
-
-    }
-
-        function searchCustomer(id){
-        return customerDB.find(function (customer){
-        return  customer.id==id;
-    });
-    }
-
-        //bind table tr events
-        function bindTrEvents(){
-        $('#tblCustomer>tr').click(function(){
-            //get the selected rows data
-            let id=$(this).children().eq(0).text();
-            let name=$(this).children().eq(1).text();
-            let address=$(this).children().eq(2).text();
-            let contact=$(this).children().eq(3).text();
-
-            //set the selected rows data to the input fields
-            $("#txtCustomerId").val(id);
-            $("#txtCustomerName").val(name);
-            $("#txtCustomerAddress").val(address);
-            $("#txtCustomerContact").val(contact);
-        })
-    }
-
-
-
-        function getAllCustomer() {
-        $("#tblCustomer").empty();
-
-        //get all customers
-        for (let i = 0; i < customerDB.length; i++) {
-        let id = customerDB[i].id;
-        let name = customerDB[i].name;
-        let address = customerDB[i].address;
-        let contact = customerDB[i].contact;
-
-        let row = `<tr>
-                     <td>${id}</td>
-                     <td>${name}</td>
-                     <td>${address}</td>
-                     <td>${contact}</td>
-                    </tr>`;
-
-        // //and then append the row to tableBody
-        $("#tblCustomer").append(row);
-
-        bindTrEvents();
-    }
-    }
-
-
-</script>
-
-
-</script>
 </body>
 </html>

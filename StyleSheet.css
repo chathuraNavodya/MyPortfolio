@@ -399,6 +399,21 @@ header .circle {
   opacity: 0.06;
 }
 
+/* Media queries for tablets */
+@media only screen and (max-width: 1024px) {
+  .header-title {
+    font-size: 3rem;
+  }
+
+  header .points1 {
+    width: 320px;
+    bottom: -60px;
+    left: -120px;
+  }
+
+
+}
+
 /* End header */
 
 /* About */
