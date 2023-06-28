@@ -4,7 +4,7 @@ Technologies & Frameworks
 
 HTML CSS JavaScript Bootstrap jQuery Deployment
 
-Site Map URL : https://www.gloomaps.com/z46kePAHbp](https://app.diagrams.net/#G1h71ikPpV2_p7ZCKsIFfsSRqWOMUDXrYI
+Site Map URL : https://www.gloomaps.com/z46kePAHbp
 
 Wire-frame URL : https://wireframe.cc/jGrefegkf
 
