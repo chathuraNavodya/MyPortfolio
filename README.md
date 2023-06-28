@@ -4,7 +4,7 @@ Technologies & Frameworks
 
 HTML CSS JavaScript Bootstrap jQuery Deployment
 
-Site Map URL : https://G1h71ikPpV2_p7ZCKsIFfsSRqWOMUDXrYIp
+Site Map URL :https://app.diagrams.net/#G1h71ikPpV2_p7ZCKsIFfsSRqWOMUDXrYI
 
 Wire-frame URL : https://wireframe.cc/jGrefegkf
 
