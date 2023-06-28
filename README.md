@@ -1,5 +1,3 @@
-
-My-Portfolio Website
 My Personal Website
 
 Technologies & Frameworks
